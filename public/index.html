@@ -67,6 +67,7 @@
 	  "url": "https://bessersehen.la",
 	  "telephone": "+4987114228020",
 	  "priceRange": "€€",
+	  "description": "Ihr Experte fuer spezielle Kontaktlinsen, Myopie-Management, Nachtlinsen (Orthokeratologie) und visuelle Rehabilitation in Landshut. Beratung auch nach Vereinbarung moeglich.",
 	  "address": {
 	    "@type": "PostalAddress",
 	    "streetAddress": "Veldener Str. 16",
@@ -79,14 +80,22 @@
 	    "latitude": 48.5239261,
 	    "longitude": 12.1449762
 	  },
-	  "openingHoursSpecification": {
-	    "@type": "OpeningHoursSpecification",
-	    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-	    "opens": "09:00",
-	    "closes": "18:00"
-	  },
+	  "openingHoursSpecification": [
+	    {
+	      "@type": "OpeningHoursSpecification",
+	      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+	      "opens": "09:00",
+	      "closes": "16:00"
+	    }
+	  ],
+	  "areaServed": [
+	    {"@type": "City", "name": "Landshut"},
+	    {"@type": "City", "name": "Ergolding"},
+	    {"@type": "City", "name": "Rottenburg an der Laaber"}
+	  ],
 	  "sameAs": [
-	    "https://www.facebook.com/bessersehenlandshut/"
+	    "https://www.facebook.com/bessersehenlandshut/",
+	    "https://www.google.com/maps?cid=13745904768855660490"
 	  ]
 	}
 	</script>
