@@ -24,7 +24,7 @@
 - [x] **SCHEMA-01**: Optician-Schema auf index.html enthält address, telephone, openingHoursSpecification, geo, sameAs
 - [x] **SCHEMA-02**: WebSite-Schema mit SearchAction auf index.html
 - [x] **SCHEMA-03**: Service-Schema auf allen 4 Leistungsseiten enthält serviceType und image
-- [ ] **SCHEMA-04**: Person-Schema für jedes Teammitglied auf team.html
+- [x] **SCHEMA-04**: Person-Schema für jedes Teammitglied auf team.html
 - [x] **SCHEMA-05**: areaServed in Optician-Schema als City-Objekte (Landshut + Nachbargemeinden)
 
 ### Content
@@ -76,7 +76,7 @@
 | SCHEMA-01 | Phase 3 | Complete |
 | SCHEMA-02 | Phase 3 | Complete |
 | SCHEMA-03 | Phase 3 | Complete |
-| SCHEMA-04 | Phase 3 | Pending |
+| SCHEMA-04 | Phase 3 | Complete |
 | SCHEMA-05 | Phase 3 | Complete |
 | CONT-01 | Phase 4 | Pending |
 | CONT-02 | Phase 4 | Pending |

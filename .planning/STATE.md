@@ -32,9 +32,9 @@ Progress: [█████████████████████░░
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5 (01-01, 01-02, 02-01, 03-01, 03-02)
+- Total plans completed: 6 (01-01, 01-02, 02-01, 03-01, 03-02, 03-03)
 - Average duration: ~10 min (schema plans fast, analytics plans had human setup)
-- Total execution time: ~92 min (01-01: 64 min incl. human; 01-02: ~11 min; 02-01: ~15 min; 03-01: ~1 min; 03-02: ~1 min)
+- Total execution time: ~97 min (01-01: 64 min incl. human; 01-02: ~11 min; 02-01: ~15 min; 03-01: ~1 min; 03-02: ~1 min; 03-03: ~5 min)
 
 **By Phase:**
 
@@ -42,10 +42,10 @@ Progress: [█████████████████████░░
 |-------|-------|-------|----------|
 | 01-analytics | 2/2 | ~75 min | ~38 min |
 | 02-security | 1/1 | ~15 min | ~15 min |
-| 03-schema | 2/4 | ~2 min | ~1 min |
+| 03-schema | 3/4 | ~7 min | ~2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (11 min), 02-01 (15 min), 03-01 (1 min), 03-02 (1 min)
+- Last 5 plans: 02-01 (15 min), 03-01 (1 min), 03-02 (1 min), 03-03 (5 min)
 - Trend: On track
 
 *Updated after each plan completion*
@@ -73,6 +73,9 @@ Recent decisions affecting current work:
 - [Phase 03-schema]: closes=16:00 korrigiert (war 18:00 — inhaltlich falsch)
 - [Phase 03-schema]: Kein SearchAction in WebSite-Schema — statische Seite, kein Search-Endpoint
 - [03-02]: Bestehende descriptions beibehalten (praeziser als Plan-Vorschlaege); areaServed City-Array mit Landshut, Ergolding, Rottenburg auf allen 4 Leistungsseiten
+- [03-03]: Person-Schema JSON-Array mit @context pro Item (keine @graph-Wrapper) — standard-konform
+- [03-03]: worksFor @type Organization (nicht Optician) — allgemeiner fuer Arbeitgeber-Kontext
+- [03-03]: Jennifer Huegel im Schema korrekt benannt trotz fehlerh. alt-Attr "Maria Schueler" im HTML
 
 ### Pending Todos
 
@@ -81,11 +84,11 @@ None yet.
 ### Blockers/Concerns
 
 - KeyHelp-Warnung: Reverse-Proxy-Direktiven wurden direkt via SSH in VHost eingetragen — können bei KeyHelp-Änderungen (z.B. SSL-Erneuerung) überschrieben werden. Ggf. nach KeyHelp-Aktionen prüfen.
-- Phase 3: Genaue Öffnungszeiten und Google-Maps-URL müssen aus bestehendem HTML extrahiert werden (für Schema)
 - Phase 4: Fachlich korrekte Inhalte zu Augenoptik/Kontaktlinsen — Markennamen und Verfahren korrekt benennen
+- Fehlerhaftes alt-Attribut bei Jennifer Huegel (team-jenny-huegel.jpg alt="Maria Schueler") — Content-Phase
 
 ## Session Continuity
 
-Last session: 2026-03-03T08:16Z
-Stopped at: Completed 03-02-PLAN.md — Service-Schemas auf 4 Leistungsseiten vervollstaendigt (serviceType, image, areaServed City-Array)
-Resume file: None — Phase 3 continues: 03-03 (Person-Schema team.html) und 03-04 (WebSite-Schema index.html) ausstehend
+Last session: 2026-03-03T08:20Z
+Stopped at: Completed 03-03-PLAN.md — Person-Schema mit 7 Teammitgliedern auf team.html (E-E-A-T)
+Resume file: None — Phase 3 Plan 04 (WebSite-Schema + areaServed auf index.html) next
