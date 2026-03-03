@@ -29,16 +29,16 @@
 
 ### Content
 
-- [ ] **CONT-01**: leistungen-nachtlinsen.html hat 800+ Wörter (inkl. FAQ zu Kosten/Kasse, DreamLens, Paragon CRT)
-- [ ] **CONT-02**: leistungen-beratung-kurzsichtigkeit.html hat 800+ Wörter (Myopie-Management, Zielgruppe Kinder/Jugendliche)
-- [ ] **CONT-03**: leistungen-visuelle-reha.html hat 800+ Wörter (Hilfsmittel, Beratung, Zielgruppe)
-- [ ] **CONT-04**: leistungen-kontaktlinsen.html hat 800+ Wörter (Linsentypen, Anpassung, Vorteile)
+- [x] **CONT-01**: leistungen-nachtlinsen.html hat 800+ Wörter (inkl. FAQ zu Kosten/Kasse, DreamLens, Paragon CRT)
+- [x] **CONT-02**: leistungen-beratung-kurzsichtigkeit.html hat 800+ Wörter (Myopie-Management, Zielgruppe Kinder/Jugendliche)
+- [x] **CONT-03**: leistungen-visuelle-reha.html hat 800+ Wörter (Hilfsmittel, Beratung, Zielgruppe)
+- [x] **CONT-04**: leistungen-kontaktlinsen.html hat 800+ Wörter (Linsentypen, Anpassung, Vorteile)
 - [ ] **CONT-05**: team.html enthält Spezialisierungen und Qualifikationen je Person (80 → 300+ Wörter)
-- [ ] **CONT-06**: Nachbargemeinden Ergolding und Rottenburg a.d.L. in relevantem Content erwähnt
+- [x] **CONT-06**: Nachbargemeinden Ergolding und Rottenburg a.d.L. in relevantem Content erwähnt
 
 ### Meta-Daten
 
-- [ ] **META-01**: meta name="keywords" ist auf jeder der 8 Seiten individuell (aktuell identisch)
+- [x] **META-01**: meta name="keywords" ist auf jeder der 8 Seiten individuell (aktuell identisch)
 
 ## v2 Requirements
 
@@ -78,13 +78,13 @@
 | SCHEMA-03 | Phase 3 | Complete |
 | SCHEMA-04 | Phase 3 | Complete |
 | SCHEMA-05 | Phase 3 | Complete |
-| CONT-01 | Phase 4 | Pending |
-| CONT-02 | Phase 4 | Pending |
-| CONT-03 | Phase 4 | Pending |
-| CONT-04 | Phase 4 | Pending |
+| CONT-01 | Phase 4 | Complete |
+| CONT-02 | Phase 4 | Complete |
+| CONT-03 | Phase 4 | Complete |
+| CONT-04 | Phase 4 | Complete |
 | CONT-05 | Phase 4 | Pending |
-| CONT-06 | Phase 4 | Pending |
-| META-01 | Phase 4 | Pending |
+| CONT-06 | Phase 4 | Complete |
+| META-01 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 20 total

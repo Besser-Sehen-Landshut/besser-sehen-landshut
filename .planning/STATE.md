@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-03T08:36:48.419Z"
+last_updated: "2026-03-03T09:16:16.687Z"
 progress:
-  total_phases: 3
+  total_phases: 4
   completed_phases: 3
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 12
+  completed_plans: 11
 ---
 
 ---
@@ -35,12 +35,12 @@ See: .planning/PROJECT.md (updated 2026-03-03)
 
 ## Current Position
 
-Phase: 3 of 4 (Schema) — COMPLETE
-Plan: 4 of 4 in Phase 3 — COMPLETE
-Status: Phase 3 complete — bereit fuer Phase 4 Content
-Last activity: 2026-03-03 — 03-04 complete: Alle 6 Schema-Dateien deployed, Google Rich Results Test approved (SCHEMA-01 bis SCHEMA-05 erfuellt)
+Phase: 4 of 4 (Content) — IN PROGRESS
+Plan: 4 of 5 in Phase 4 — COMPLETE
+Status: Phase 4 aktiv — 04-04 complete: leistungen-kontaktlinsen.html auf 816 Woerter ausgebaut, Meta-Keywords individualisiert
+Last activity: 2026-03-03 — 04-04 complete: Kontaktlinsen-Seite 816 Woerter, Linsentypen/Spezialversorgung/Nachsorge, Ergolding+Rottenburg eingebettet
 
-Progress: [████████████████████████░] 85% (Phase 1 + Phase 2 + Phase 3 complete)
+Progress: [█████████████████████████░] 90% (Phase 1 + 2 + 3 complete, Phase 4 Plan 4/5 done)
 
 ## Performance Metrics
 
@@ -62,6 +62,10 @@ Progress: [███████████████████████
 - Trend: On track — Phase 3 vollstaendig abgeschlossen
 
 *Updated after each plan completion*
+| Phase 04-content P04 | 1 | 1 tasks | 1 files |
+| Phase 04-content P03 | 2 | 1 tasks | 1 files |
+| Phase 04-content P01 | 2 | 1 tasks | 1 files |
+| Phase 04-content P02 | 2 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -91,6 +95,11 @@ Recent decisions affecting current work:
 - [03-03]: Jennifer Huegel im Schema korrekt benannt trotz fehlerh. alt-Attr "Maria Schueler" im HTML
 - [03-04]: Deploy via GitHub Actions rsync (17s) — kein manueller Upload noetig; alle 12 JSON-LD-Bloecke lokal pre-validiert vor Checkpoint
 - [03-04]: Google Rich Results Test ohne Fehler approved — Phase 3 Schema-Markup vollstaendig (SCHEMA-01 bis SCHEMA-05)
+- [Phase 04-content]: [04-04]: Gleitsicht-Multifokal-Linsen erwaehnt; Ergolding/Rottenburg zweifach eingebettet; Meta-Keywords Kontaktlinsen-spezifisch
+- [Phase 04-content]: Plantext der Visuellen-Reha-Seite lieferte nur 595 Woerter — Low-Vision-Sektion und Erweiterungen automatisch hinzugefuegt um das Plan-Kriterium 800+ Woerter zu erfuellen
+- [Phase 04-content]: Schliessenden CTA-Absatz hinzugefuegt um 800-Wort-Ziel sicher zu ueberschreiten (825 Woerter)
+- [Phase 04-content]: [04-01] Privatleistung klar kommuniziert: GKV uebernimmt keine Orthokeratologie-Kosten
+- [Phase 04-content]: FAQ-Sektion als sechste H2 ergaenzt: Plan-Text erreichte nur 663 Woerter statt 800+ — Augenlängen-Messung als zweite H2-Sektion (nach Ursachen, vor Methoden) — meta keywords vollstaendig seitenspezifisch auf Myopie-Management Landshut
 
 ### Pending Todos
 
@@ -104,6 +113,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-03T08:25Z
-Stopped at: Completed 03-04-PLAN.md — Alle 6 Schema-Dateien deployed, Google Rich Results Test approved, Phase 3 komplett
-Resume file: None — Phase 4 Content bereit (Leistungsseiten Wortanzahl aufbauen, team.html erweitern)
+Last session: 2026-03-03T09:15Z
+Stopped at: Completed 04-04-PLAN.md — leistungen-kontaktlinsen.html auf 816 Woerter ausgebaut, Meta-Keywords individualisiert (CONT-04, CONT-06, META-01 erfuellt)
+Resume file: None — Phase 4 Plan 5 (team.html) steht aus
