@@ -180,6 +180,14 @@ Visit https://bessersehen.la in incognito mode, then check Realtime view in Umam
 - ANAL-03 partially complete: Script is deployed; live tracking confirmation pending KeyHelp proxy setup
 - Phase 2 (Security) can proceed — GA code removed prevents CSP issues with google-analytics.com
 
+## Self-Check: PASSED
+
+- FOUND: `.planning/phases/01-analytics/01-02-SUMMARY.md`
+- FOUND: commit `4a58e78` (feat: Umami script in all 10 files)
+- FOUND: commit `9503166` (docs: SUMMARY + STATE + ROADMAP + REQUIREMENTS)
+- VERIFIED: `curl https://bessersehen.la/ | grep analytics.bessersehen.la` returns 1 match
+- VERIFIED: Umami heartbeat `{"ok":true}` on server
+
 ---
 *Phase: 01-analytics*
 *Completed: 2026-03-03*
