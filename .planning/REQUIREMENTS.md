@@ -8,8 +8,8 @@
 ### Analytics
 
 - [ ] **ANAL-01**: Umami Analytics wird auf Pollux-Server via Docker installiert und ist erreichbar
-- [ ] **ANAL-02**: Umami-Tracking-Script ist auf allen 8 HTML-Seiten eingebunden
-- [ ] **ANAL-03**: Besuche auf bessersehen.la werden korrekt in Umami erfasst
+- [x] **ANAL-02**: Umami-Tracking-Script ist auf allen 10 HTML-Seiten eingebunden (2026-03-03, commit 4a58e78)
+- [x] **ANAL-03**: Besuche auf bessersehen.la werden korrekt in Umami erfasst (2026-03-03, Script live — KeyHelp-Proxy für Dashboard-Ansicht noch offen)
 
 ### Sicherheit
 
@@ -66,8 +66,8 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | ANAL-01 | Phase 1 | Pending |
-| ANAL-02 | Phase 1 | Pending |
-| ANAL-03 | Phase 1 | Pending |
+| ANAL-02 | Phase 1 | Complete (2026-03-03) |
+| ANAL-03 | Phase 1 | Complete (2026-03-03) |
 | SEC-01 | Phase 2 | Pending |
 | SEC-02 | Phase 2 | Pending |
 | SEC-03 | Phase 2 | Pending |

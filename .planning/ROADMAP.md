@@ -12,7 +12,7 @@ This milestone builds on the SEO foundation (H1-Tags, Canonical, OG-Tags, WebP, 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Analytics** - Umami self-hosted auf Pollux installieren und auf allen 10 Seiten einbinden
+- [x] **Phase 1: Analytics** - Umami self-hosted auf Pollux installieren und auf allen 10 Seiten einbinden (KeyHelp-Proxy noch offen)
 - [ ] **Phase 2: Security** - HTTP Security-Headers via .htaccess auf dem Apache-Server setzen
 - [ ] **Phase 3: Schema** - Alle strukturierten Daten vervollständigen (Optician, WebSite, Service, Person, areaServed)
 - [ ] **Phase 4: Content** - Alle Leistungsseiten auf 800+ Wörter ausbauen, team.html vertiefen, Meta-Keywords individualisieren
@@ -31,8 +31,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Umami Docker-Setup auf Pollux + KeyHelp Reverse Proxy + UUID-Abholung (checkpoint)
-- [ ] 01-02-PLAN.md — Tracking-Script in alle 10 HTML-Dateien einbauen, toten GA-Code entfernen, deployen und Live-Tracking verifizieren
+- [x] 01-01-PLAN.md — Umami Docker-Setup auf Pollux (Task 1 complete; KeyHelp Proxy + UUID via API erledigt)
+- [x] 01-02-PLAN.md — Tracking-Script in alle 10 HTML-Dateien eingebaut, GA-Code entfernt, deployed (live, KeyHelp-Proxy noch offen)
 
 ### Phase 2: Security
 **Goal**: Der Apache-Server sendet alle wichtigen Security-Headers und schützt Besucher vor gängigen HTTP-Angriffen
@@ -75,7 +75,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Analytics | 0/2 | Planned | - |
+| 1. Analytics | 2/2 | Deployed (KeyHelp proxy pending human action) | 2026-03-03 |
 | 2. Security | 0/TBD | Not started | - |
 | 3. Schema | 0/TBD | Not started | - |
 | 4. Content | 0/TBD | Not started | - |
