@@ -2,39 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-03-03T09:21:12.982Z"
+status: complete
+last_updated: "2026-03-03T09:47:00.000Z"
 progress:
   total_phases: 4
   completed_phases: 4
   total_plans: 12
   completed_plans: 12
----
-
----
-gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
-status: unknown
-last_updated: "2026-03-03T09:16:16.687Z"
-progress:
-  total_phases: 4
-  completed_phases: 3
-  total_plans: 12
-  completed_plans: 11
----
-
----
-gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
-status: active
-last_updated: "2026-03-03T08:25:12Z"
-progress:
-  total_phases: 4
-  completed_phases: 3
-  total_plans: 7
-  completed_plans: 7
 ---
 
 # Project State
@@ -44,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-03)
 
 **Core value:** Potenzielle Patienten aus Landshut finden bessersehen.la über Google und nehmen Kontakt auf.
-**Current focus:** Phase 4 – Content
+**Current focus:** Milestone v1.0 abgeschlossen
 
 ## Current Position
 
 Phase: 4 of 4 (Content) — COMPLETE
-Plan: 5 of 5 in Phase 4 — COMPLETE (checkpoint human-verify pending)
-Status: Phase 4 vollstaendig — 04-05 complete: META-01 alle 8 Seiten, Phase-4-Content auf bessersehen.la deployed (HTTP 200)
-Last activity: 2026-03-03 — 04-05 complete: Individuelle meta keywords auf index, leistungen, team, kontakt — git push deployed alles live
+Plan: 5 of 5 in Phase 4 — COMPLETE (Checkpoint human-verify approved 2026-03-03)
+Status: Milestone v1.0 vollständig — alle 4 Phasen abgeschlossen, bessersehen.la live mit Analytics, Security-Headers, Schema-Markup und Content-Ausbau
+Last activity: 2026-03-03 — Checkpoint approved, Phase 4 abgeschlossen, Milestone v1.0 complete
 
-Progress: [██████████████████████████] 100% (Phase 1 + 2 + 3 + 4 complete — Checkpoint human-verify ausstehend)
+Progress: [██████████████████████████] 100% (Phase 1 + 2 + 3 + 4 complete — Milestone v1.0 DONE)
 
 ## Performance Metrics
 
@@ -123,11 +97,11 @@ None yet.
 ### Blockers/Concerns
 
 - KeyHelp-Warnung: Reverse-Proxy-Direktiven wurden direkt via SSH in VHost eingetragen — können bei KeyHelp-Änderungen (z.B. SSL-Erneuerung) überschrieben werden. Ggf. nach KeyHelp-Aktionen prüfen.
-- Phase 4: Fachlich korrekte Inhalte zu Augenoptik/Kontaktlinsen — Markennamen und Verfahren korrekt benennen
-- Fehlerhaftes alt-Attribut bei Jennifer Huegel (team-jenny-huegel.jpg alt="Maria Schueler") — Content-Phase
+- Fehlerhaftes alt-Attribut bei Jennifer Huegel (team-jenny-huegel.jpg alt="Maria Schueler") — für künftige Content-Pflege notieren
+- Wortanzahlen nach Überarbeitung: 650–720 Wörter (unter ursprünglichem 800-Wort-Ziel) — bewusst akzeptiert, Qualität > Quantität
 
 ## Session Continuity
 
-Last session: 2026-03-03T09:28Z
-Stopped at: Checkpoint human-verify in 04-05-PLAN.md — Phase-4-Content live auf bessersehen.la, META-01 alle 8 Seiten, awaiting visual verification
-Resume file: None — Checkpoint ausstehend; nach "approved" ist Phase 4 abgeschlossen
+Last session: 2026-03-03T09:47Z
+Stopped at: Milestone v1.0 abgeschlossen — Checkpoint approved, alle Phasen complete
+Resume file: None — Projekt abgeschlossen

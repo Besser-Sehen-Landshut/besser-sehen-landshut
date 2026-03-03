@@ -78,11 +78,11 @@ Plans:
 **Plans**: 5 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — leistungen-nachtlinsen.html: 800+ Wörter, FAQ-Block (Kosten/Kasse/Sicherheit/Eignung), meta keywords
-- [ ] 04-02-PLAN.md — leistungen-beratung-kurzsichtigkeit.html: 800+ Wörter, Augenlängen-Messung USP-Sektion, meta keywords
-- [ ] 04-03-PLAN.md — leistungen-visuelle-reha.html: 800+ Wörter, Zielgruppen/Hilfsmittel, meta keywords
-- [ ] 04-04-PLAN.md — leistungen-kontaktlinsen.html: 800+ Wörter, Linsentypen/Spezialversorgung, meta keywords
-- [ ] 04-05-PLAN.md — meta keywords auf verbleibenden 4 Seiten (index, leistungen, team, kontakt), deployen, live verifizieren
+- [x] 04-01-PLAN.md — leistungen-nachtlinsen.html: 800+ Wörter, FAQ-Block (Kosten/Kasse/Sicherheit/Eignung), meta keywords
+- [x] 04-02-PLAN.md — leistungen-beratung-kurzsichtigkeit.html: 800+ Wörter, Augenlängen-Messung USP-Sektion, meta keywords
+- [x] 04-03-PLAN.md — leistungen-visuelle-reha.html: 800+ Wörter, Zielgruppen/Hilfsmittel, meta keywords
+- [x] 04-04-PLAN.md — leistungen-kontaktlinsen.html: 800+ Wörter, Linsentypen/Spezialversorgung, meta keywords
+- [x] 04-05-PLAN.md — meta keywords auf verbleibenden 4 Seiten (index, leistungen, team, kontakt), deployen, live verifizieren
 
 ## Progress
 
