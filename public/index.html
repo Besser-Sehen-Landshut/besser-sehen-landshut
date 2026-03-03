@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 	<head>
 
 		<!-- Basic -->
@@ -831,7 +831,7 @@
 			];
             var randomVideo = videos[Math.floor(Math.random() * videos.length)];
             var initialSlide = document.getElementById('initialVideo');
-			initialSlide.setAttribute('data-videomp4', randomVideo)
+			if (initialSlide) initialSlide.setAttribute('data-videomp4', randomVideo);
         </script>
 
 		<!-- Theme Base, Components and Settings -->
