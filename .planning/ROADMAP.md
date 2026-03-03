@@ -42,7 +42,10 @@ Plans:
   1. `curl -I https://bessersehen.la` zeigt Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options, Referrer-Policy und Content-Security-Policy
   2. securityheaders.com gibt der Website mindestens Grade B
   3. Die Website lädt weiterhin fehlerfrei (keine durch CSP blockierten Ressourcen)
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 02-01-PLAN.md — .htaccess mit allen 5 Security-Headers erstellen, deployen, securityheaders.com Grade B verifizieren
 
 ### Phase 3: Schema
 **Goal**: Google kann Besser Sehen Landshut als lokales Geschäft vollständig verstehen und im Knowledge Panel darstellen
@@ -76,6 +79,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Analytics | 2/2 | Complete | 2026-03-03 |
-| 2. Security | 0/TBD | Not started | - |
+| 2. Security | 0/1 | Not started | - |
 | 3. Schema | 0/TBD | Not started | - |
 | 4. Content | 0/TBD | Not started | - |
