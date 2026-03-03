@@ -57,7 +57,13 @@ Plans:
   3. Jede der 4 Leistungsseiten hat ein gültiges Service-Schema mit serviceType und image
   4. team.html enthält ein Person-Schema für jedes Teammitglied
   5. areaServed listet Landshut sowie Nachbargemeinden als City-Objekte
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Optician-Schema erweitern (openingHoursSpecification, sameAs Maps-CID, areaServed City-Array) + WebSite-Schema hinzufuegen
+- [ ] 03-02-PLAN.md — Service-Schemas auf allen 4 Leistungsseiten: serviceType, image, areaServed City-Array ergaenzen
+- [ ] 03-03-PLAN.md — Person-Schema fuer alle 7 Teammitglieder auf team.html hinzufuegen
+- [ ] 03-04-PLAN.md — Alle 6 geaenderten Dateien committen, deployen und mit Google Rich Results Test validieren
 
 ### Phase 4: Content
 **Goal**: Jede Leistungsseite hat genug Tiefe, um bei lokalen Suchanfragen zu ranken, und Meta-Daten sind seitenindividuell
@@ -80,5 +86,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Analytics | 2/2 | Complete | 2026-03-03 |
 | 2. Security | 1/1 | Complete | 2026-03-03 |
-| 3. Schema | 0/TBD | Not started | - |
+| 3. Schema | 0/4 | Not started | - |
 | 4. Content | 0/TBD | Not started | - |
