@@ -4,7 +4,6 @@
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
 		<title>Besser Sehen Landshut / Leistungen</title>	
 
@@ -69,9 +68,6 @@
 		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 		<link rel="stylesheet" href="vendor/animate/animate.min.css">
 		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
-		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
-		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/theme.css">
@@ -80,9 +76,6 @@
 		<link rel="stylesheet" href="css/theme-shop.css">
 
 		<!-- Current Page CSS -->
-		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
-		<link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
-		<link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
 		
 		<!-- Skin CSS -->
 		<link rel="stylesheet" href="css/skins/skin-besser-sehen.css"> 
@@ -91,208 +84,6 @@
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- WhatsApp Floating Button -->
-		<style>
-			.whatsapp-float {
-				position: fixed;
-				width: 60px;
-				height: 60px;
-				bottom: 40px;
-				right: 40px;
-				background-color: #25d366;
-				color: #FFF;
-				border-radius: 50px;
-				text-align: center;
-				font-size: 30px;
-				box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-				z-index: 100;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				transition: all 0.3s ease;
-			}
-			.whatsapp-float:hover {
-				background-color: #128C7E;
-				transform: scale(1.1);
-				box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
-			}
-			.whatsapp-float i {
-				color: white;
-			}
-			@media screen and (max-width: 768px) {
-				.whatsapp-float {
-					width: 50px;
-					height: 50px;
-					bottom: 20px;
-					right: 20px;
-					font-size: 25px;
-				}
-			}
-
-			/* ==========================================
-			   SERVICE CARDS - Same style as homepage
-			   ========================================== */
-			.cards-medical-services {
-				position: relative;
-			}
-			/* Cards gleiche Höhe */
-			.cards-medical-services > .card {
-				display: flex;
-			}
-			/* Dekorative Kreise im Hintergrund */
-			.cards-medical-services::before {
-				content: '';
-				position: absolute;
-				top: -100px;
-				right: -100px;
-				width: 400px;
-				height: 400px;
-				background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 70%);
-				border-radius: 50%;
-				pointer-events: none;
-				z-index: 0;
-			}
-			.cards-medical-services::after {
-				content: '';
-				position: absolute;
-				bottom: -150px;
-				left: -150px;
-				width: 500px;
-				height: 500px;
-				background: radial-gradient(circle, rgba(0, 0, 0, 0.015) 0%, transparent 70%);
-				border-radius: 50%;
-				pointer-events: none;
-				z-index: 0;
-			}
-			.cards-medical-services .card-body {
-				position: relative;
-				padding: 0 !important;
-				background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-				border-radius: 24px !important;
-				border: 1px solid rgba(0, 0, 0, 0.05) !important;
-				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-				overflow: hidden;
-				z-index: 1;
-				height: 100%;
-				display: flex;
-				flex-direction: column;
-				align-items: stretch !important;
-			}
-			/* Hover-Effekt */
-			.cards-medical-services .card-body::before {
-				content: '';
-				position: absolute;
-				top: -50%;
-				right: -50%;
-				width: 200%;
-				height: 200%;
-				background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 70%);
-				opacity: 0;
-				transition: opacity 0.6s ease;
-			}
-			.cards-medical-services .card-body:hover::before {
-				opacity: 1;
-			}
-			.cards-medical-services .card-body:hover {
-				transform: translateY(-8px);
-				box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12) !important;
-				border-color: rgba(0, 0, 0, 0.08) !important;
-			}
-			/* Image Container - Full width like card header */
-			.cards-medical-services .card-body img {
-				width: 100% !important;
-				height: auto;
-				margin: 0 0 24px 0 !important;
-				display: block;
-				transition: transform 0.4s ease;
-				border-radius: 24px 24px 0 0 !important;
-				object-fit: cover;
-			}
-			.cards-medical-services .card-body:hover img {
-				transform: scale(1.02);
-			}
-			/* Card Titles */
-			.cards-medical-services .card-title {
-				font-family: 'Rajdhani', sans-serif;
-				font-weight: 600;
-				font-size: 1.25rem;
-				letter-spacing: 0.05em;
-				line-height: 1.3;
-				color: #212529;
-				margin-bottom: 1rem;
-				padding: 0 20px;
-				position: relative;
-				z-index: 2;
-			}
-			.cards-medical-services .card-text {
-				color: #6c757d;
-				line-height: 1.6;
-				padding: 0 20px;
-				position: relative;
-				z-index: 2;
-				margin-bottom: 1rem;
-			}
-			/* "Mehr dazu" Link - Subtle Button Style */
-			.cards-medical-services .card-body a {
-				margin: auto 20px 20px 20px;
-				padding: 8px 20px;
-				color: #6c757d;
-				background: transparent;
-				border: 1px solid #dee2e6;
-				border-radius: 6px;
-				transition: all 0.3s ease;
-				position: relative;
-				z-index: 3;
-				display: inline-block;
-				font-weight: 500;
-				font-size: 0.8rem;
-				letter-spacing: 0.03em;
-				text-transform: uppercase;
-				text-decoration: none;
-				text-align: center;
-			}
-			.cards-medical-services .card-body a:hover {
-				background: #f8f9fa;
-				color: #212529;
-				border-color: #adb5bd;
-				transform: translateY(-1px);
-			}
-
-			/* ==========================================
-			   MICRO-INTERACTIONS - Staggered Animation
-			   ========================================== */
-			@keyframes fadeInUp {
-				from {
-					opacity: 0;
-					transform: translateY(30px);
-				}
-				to {
-					opacity: 1;
-					transform: translateY(0);
-				}
-			}
-			.cards-medical-services > .card:nth-child(1) .card-body {
-				animation: fadeInUp 0.6s ease-out 0.1s both;
-			}
-			.cards-medical-services > .card:nth-child(2) .card-body {
-				animation: fadeInUp 0.6s ease-out 0.2s both;
-			}
-			.cards-medical-services > .card:nth-child(3) .card-body {
-				animation: fadeInUp 0.6s ease-out 0.3s both;
-			}
-			.cards-medical-services > .card:nth-child(4) .card-body {
-				animation: fadeInUp 0.6s ease-out 0.4s both;
-			}
-
-			/* ==========================================
-			   RESPONSIVE ADJUSTMENTS
-			   ========================================== */
-			@media screen and (max-width: 768px) {
-				.cards-medical-services::before,
-				.cards-medical-services::after {
-					display: none;
-				}
-			}
-		</style>
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
@@ -322,20 +113,7 @@
 												<li class="nav-item d-none d-xl-inline-flex">
                                                     <span class="header-top-email px-0 font-weight-normal d-flex align-items-center"><i class="fas fa-phone text-4"></i> <a class="text-color-default" href="tel:+4987114228020">0871 - 142 280 20</a></span>
 													<span class="header-top-email px-0 font-weight-normal d-flex align-items-center"><i class="far fa-envelope text-4"></i>  
-                                                        <script language='JavaScript' type='text/javascript'>
-                                                            var pref = '&#109;a' + 'i&#108;' + '&#116;o';
-                                                            var attribut = 'hr' + 'ef' + '=';
-                                                            var first = '%68%61%6C%6C%6F';
-                                                            var at = '%40';
-                                                            var last = '&#x62;&#x65;&#x73;&#x73;&#x65;&#x72;&#x73;&#x65;&#x68;&#x65;&#x6E;&#x2E;&#x6C;&#x61;';
-                                                            var first2 = '&#x68;&#x61;&#x6C;&#x6C;&#x6F;';
-                                                            var at2 = '&#x40;';
-                                                            var last2 = '&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;';
-                                                            
-                                                            document.write( '<a class="text-color-default" ' + attribut + '\'' + pref + ':' + first + at + last + '\'>' );
-                                                            document.write( first2 + at2 + last2 );
-                                                            document.write( '<\/a>' );
-                                                        </script>
+                                                        <a class="text-color-default" href="mailto:hallo@bessersehen.la">hallo@bessersehen.la</a>
                                                         <noscript>
                                                             <span style='display:none; '>are-</span><span style='display:inline; '>&#x68;&#x61;&#x6C;&#x6C;&#x6F;</span><span style='display:none; '>-xya34</span><span style='display:inline; '>[at]</span><span style='display:none; '>ddks-</span><span style='display:inline; '>&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;</span>
                                                         </noscript>
@@ -346,7 +124,7 @@
 												<li class="nav-item nav-item-header-top-socials d-flex justify-content-between">
 <!--
                           <span class="header-top-button-make-as-appoitment d-inline-flex align-items-center justify-content-center h-100 p-0 align-top">
-                            <a href="demo-medical-2-contact-us.html" class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">MAKE AN APPOINTMENT</a>
+                            <a href="kontakt.html" class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">MAKE AN APPOINTMENT</a>
 													</span>
 -->
 												</li>
@@ -458,7 +236,10 @@
 								<div class="cards-medical-services row flex-wrap justify-content-center mb-0">
 									<div class="card border-0 border-radius-0 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 bg-transparent appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
 										<div class="card-body py-5 d-flex flex-column align-items-center justify-content-between bg-color-light hover-effect-1">
-											<img src="bilder/leistungen-kontaktlinsenversorgung-01.jpg" class="img-fluid mb-5" alt="Kontaktlinsen-Versorgung">
+											<picture>
+												<source srcset="bilder/leistungen-kontaktlinsenversorgung-01.webp" type="image/webp">
+												<img src="bilder/leistungen-kontaktlinsenversorgung-01.jpg" class="img-fluid mb-5" alt="Kontaktlinsen-Versorgung" loading="lazy">
+											</picture>
 											<h4 class="card-title mb-2 text-5 font-weight-bold text-color-quaternary text-center">Kontaktlinsen-Versorgung</h4>
 											<p class="card-text mb-2 text-center">Die perfekte Alternative zur Brille, vom Experten angepasst</p>
 											<a href="leistungen-kontaktlinsen.html" class="font-weight-semibold text-uppercase text-decoration-none">Mehr dazu</a>
@@ -466,7 +247,10 @@
 									</div>
 									<div class="card border-0 border-radius-0 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 bg-transparent appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
 										<div class="card-body py-5 d-flex flex-column align-items-center justify-content-between bg-color-light hover-effect-1">
-											<img src="bilder/leistungen-visuelle-rehabilitation-01.jpg" class="img-fluid mb-5" alt="Visuelle Reha bei Sehminderung">
+											<picture>
+												<source srcset="bilder/leistungen-visuelle-rehabilitation-01.webp" type="image/webp">
+												<img src="bilder/leistungen-visuelle-rehabilitation-01.jpg" class="img-fluid mb-5" alt="Visuelle Reha bei Sehminderung" loading="lazy">
+											</picture>
 											<h4 class="card-title mb-2 text-5 font-weight-bold text-color-quaternary text-center">Visuelle Reha bei Sehminderung</h4>
 											<p class="card-text mb-2 text-center">Wenn herkömmliche Sehkorrektionen nicht mehr ausreichen, kommen spezielle Lösungen ins Spiel.</p>
 											<a href="leistungen-visuelle-reha.html" class="font-weight-semibold text-uppercase text-decoration-none">Mehr dazu</a>
@@ -474,7 +258,10 @@
 									</div>
 									<div class="card border-0 border-radius-0 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 bg-transparent appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
 										<div class="card-body py-5 d-flex flex-column align-items-center justify-content-between bg-color-light hover-effect-1">
-											<img src="bilder/leistungen-beratung-kurzsichtigkeit-01.jpg" class="img-fluid mb-5" alt="Beratung Kurzsichtigkeit">
+											<picture>
+												<source srcset="bilder/leistungen-beratung-kurzsichtigkeit-01.webp" type="image/webp">
+												<img src="bilder/leistungen-beratung-kurzsichtigkeit-01.jpg" class="img-fluid mb-5" alt="Beratung Kurzsichtigkeit" loading="lazy">
+											</picture>
 											<h4 class="card-title mb-2 text-5 font-weight-bold text-color-quaternary text-center">Beratung zur Kurzsichtigkeit</h4>
 											<p class="card-text mb-2 text-center">Myopie kontrollieren, hohe Sehstärken eindämmen. Für Erwachsene und Kinder geeignet.</p>
 											<a href="leistungen-beratung-kurzsichtigkeit.html" class="font-weight-semibold text-uppercase text-decoration-none">Mehr dazu</a>
@@ -482,7 +269,10 @@
 									</div>
 									<div class="card border-0 border-radius-0 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 bg-transparent appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1100">
 										<div class="card-body py-5 d-flex flex-column align-items-center justify-content-between bg-color-light hover-effect-1">
-											<img src="bilder/leistungen-nachtlinsen-01.jpg" class="img-fluid mb-5" alt="Nachtlinsen/Ortho-K">
+											<picture>
+												<source srcset="bilder/leistungen-nachtlinsen-01.webp" type="image/webp">
+												<img src="bilder/leistungen-nachtlinsen-01.jpg" class="img-fluid mb-5" alt="Nachtlinsen/Ortho-K" loading="lazy">
+											</picture>
 											<h4 class="card-title mb-2 text-5 font-weight-bold text-color-quaternary text-center">Nachtlinsen/Ortho-K</h4>
 											<p class="card-text mb-2 text-center">Tagsüber scharf sehen, ohne eine Sehhilfe zu tragen, ist auch für Personen mit Sehschwäche möglich.</p>
 											<a href="leistungen-nachtlinsen.html" class="font-weight-semibold text-uppercase text-decoration-none">Mehr dazu</a>
@@ -528,20 +318,7 @@
 								<div class="custom-info-block custom-info-block-email">
 									<span class="text-color-dark font-weight-bolder text-uppercase title-custom-info-block title-custom-info-block-email">E-Mail</span>
 									<span class="font-weight-normal text-color-dark text-custom-info-block p-relative bottom-6 text-custom-info-block-email">
-                                        <script language='JavaScript' type='text/javascript'>
-                                            var pref = '&#109;a' + 'i&#108;' + '&#116;o';
-                                            var attribut = 'hr' + 'ef' + '=';
-                                            var first = '%68%61%6C%6C%6F';
-                                            var at = '%40';
-                                            var last = '&#x62;&#x65;&#x73;&#x73;&#x65;&#x72;&#x73;&#x65;&#x68;&#x65;&#x6E;&#x2E;&#x6C;&#x61;';
-                                            var first2 = '&#x68;&#x61;&#x6C;&#x6C;&#x6F;';
-                                            var at2 = '&#x40;';
-                                            var last2 = '&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;';
-                                                            
-                                            document.write( '<a class="text-color-1" ' + attribut + '\'' + pref + ':' + first + at + last + '\'>' );
-                                            document.write( first2 + at2 + last2 );
-                                            document.write( '<\/a>' );
-                                        </script>
+                                        <a href="mailto:hallo@bessersehen.la">hallo@bessersehen.la</a>
                                         <noscript>
                                             <span style='display:none; '>are-</span><span style='display:inline; '>&#x68;&#x61;&#x6C;&#x6C;&#x6F;</span><span style='display:none; '>-xya34</span><span style='display:inline; '>[at]</span><span style='display:none; '>ddks-</span><span style='display:inline; '>&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;</span>
                                         </noscript>
@@ -612,27 +389,16 @@
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/common/common.min.js"></script>
 		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
-		<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-		<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
-		<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
-		<script src="vendor/isotope/jquery.isotope.min.js"></script>
-		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script src="vendor/vide/jquery.vide.min.js"></script>
-		<script src="vendor/vivus/vivus.min.js"></script>
 		
 		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
 		
 		<!-- Current Page Vendor and Views -->
-		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
 		<!-- Current Page Vendor and Views -->
 		<script src="js/views/view.contact.js"></script>
 
 		<!-- Demo -->
-		<script src="js/demos/demo-medical-2.js"></script>
 
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>

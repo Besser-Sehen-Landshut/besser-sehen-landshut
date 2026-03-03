@@ -4,7 +4,6 @@
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<title>Besser Sehen Landshut - Kontaktlinsen-Spezialist in Niederbayern</title>
 
@@ -47,9 +46,6 @@
 		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 		<link rel="stylesheet" href="vendor/animate/animate.min.css">
 		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
-		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
-		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/theme.css">
@@ -113,9 +109,6 @@
 		<link rel="stylesheet" href="css/theme-shop.css">
 
 		<!-- Current Page CSS -->
-		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
-		<link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
-		<link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
 
 		<!-- Skin CSS -->
 		<link rel="stylesheet" href="css/skins/skin-besser-sehen.css">
@@ -124,260 +117,6 @@
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- WhatsApp Floating Button -->
-		<style>
-			/* ==========================================
-			   WHATSAPP BUTTON
-			   ========================================== */
-			.whatsapp-float {
-				position: fixed;
-				width: 60px;
-				height: 60px;
-				bottom: 40px;
-				right: 40px;
-				background-color: #25d366;
-				color: #FFF;
-				border-radius: 50px;
-				text-align: center;
-				font-size: 30px;
-				box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-				z-index: 100;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				transition: all 0.3s ease;
-			}
-			.whatsapp-float:hover {
-				background-color: #128C7E;
-				transform: scale(1.1);
-				box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
-			}
-			.whatsapp-float i {
-				color: white;
-			}
-			@media screen and (max-width: 768px) {
-				.whatsapp-float {
-					width: 50px;
-					height: 50px;
-					bottom: 20px;
-					right: 20px;
-					font-size: 25px;
-				}
-			}
-
-			/* ==========================================
-			   HERO SECTION - Dark Overlay
-			   ========================================== */
-			.parallax.section-parallax::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(0, 0, 0, 0.4);
-				z-index: 1;
-			}
-			.parallax.section-parallax .container {
-				position: relative;
-				z-index: 2;
-			}
-
-			/* ==========================================
-			   TYPOGRAPHY - Enhanced
-			   ========================================== */
-			.parallax .hero-headline {
-				font-family: 'Rajdhani', sans-serif;
-				font-size: clamp(2rem, 5vw, 3.5rem);
-				font-weight: 600;
-				letter-spacing: 0.03em;
-				line-height: 1.3;
-				text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-				margin-bottom: 2rem;
-			}
-			.parallax h1 {
-				font-family: 'Rajdhani', sans-serif;
-				font-weight: 700;
-				letter-spacing: 0.08em;
-				font-size: clamp(2.5rem, 8vw, 4.5rem);
-				line-height: 1.1;
-				margin-bottom: 1.5rem;
-			}
-			.parallax p {
-				font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-				line-height: 1.6;
-				font-weight: 300;
-				letter-spacing: 0.02em;
-				max-width: 600px;
-				margin: 0 auto 2rem;
-			}
-
-			/* ==========================================
-			   CTA BUTTON - Premium Design
-			   ========================================== */
-			.parallax .btn-primary {
-				border: none !important;
-				padding: 16px 40px;
-				font-family: 'Rajdhani', sans-serif;
-				font-weight: 600;
-				letter-spacing: 0.05em;
-				text-transform: uppercase;
-				font-size: 1rem;
-				border-radius: 50px;
-				position: relative;
-				overflow: hidden;
-				transition: all 0.3s ease;
-				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-			}
-			/* Glanz-Effekt */
-			.parallax .btn-primary::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -100%;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-				transition: left 0.5s ease;
-			}
-			.parallax .btn-primary:hover::before {
-				left: 100%;
-			}
-			.parallax .btn-primary:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-			}
-
-			/* ==========================================
-			   SERVICE CARDS - Komplett überarbeitet
-			   ========================================== */
-			.custom-cards {
-				margin-top: 200px;
-				position: relative;
-			}
-			/* Cards gleiche Höhe */
-			.custom-cards .col-xs-12 {
-				display: flex;
-			}
-			/* Dekorative Kreise im Hintergrund */
-			.custom-cards::before {
-				content: '';
-				position: absolute;
-				top: -100px;
-				right: -100px;
-				width: 400px;
-				height: 400px;
-				background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 70%);
-				border-radius: 50%;
-				pointer-events: none;
-				z-index: 0;
-			}
-			.custom-cards::after {
-				content: '';
-				position: absolute;
-				bottom: -150px;
-				left: -150px;
-				width: 500px;
-				height: 500px;
-				background: radial-gradient(circle, rgba(0, 0, 0, 0.015) 0%, transparent 70%);
-				border-radius: 50%;
-				pointer-events: none;
-				z-index: 0;
-			}
-			.custom-cards .card {
-				position: relative;
-				padding: 30px 20px;
-				background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-				border-radius: 24px !important;
-				border: 1px solid rgba(0, 0, 0, 0.05) !important;
-				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-				overflow: hidden;
-				z-index: 1;
-				height: 100%;
-				display: flex;
-				flex-direction: column;
-			}
-			/* Hover-Effekt */
-			.custom-cards .card::before {
-				content: '';
-				position: absolute;
-				top: -50%;
-				right: -50%;
-				width: 200%;
-				height: 200%;
-				background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 70%);
-				opacity: 0;
-				transition: opacity 0.6s ease;
-			}
-			.custom-cards .card:hover::before {
-				opacity: 1;
-			}
-			.custom-cards .card:hover {
-				transform: translateY(-8px);
-				box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12) !important;
-				border-color: rgba(0, 0, 0, 0.08) !important;
-			}
-			/* Icon Container - Original Style */
-			.custom-cards .card img {
-				width: 80px !important;
-				height: auto;
-				margin: 0 auto 16px;
-				display: block;
-				transition: transform 0.4s ease;
-			}
-			.custom-cards .card:hover img {
-				transform: scale(1.05);
-			}
-			/* Card Titles */
-			.custom-cards .card-title {
-				font-family: 'Rajdhani', sans-serif;
-				font-weight: 600;
-				font-size: 1.25rem;
-				letter-spacing: 0.05em;
-				line-height: 1.3;
-				color: #212529;
-				margin-bottom: 1rem;
-			}
-			.custom-cards .card-text {
-				color: #6c757d;
-				line-height: 1.6;
-			}
-
-			/* ==========================================
-			   MICRO-INTERACTIONS - Staggered Animation
-			   ========================================== */
-			@keyframes fadeInUp {
-				from {
-					opacity: 0;
-					transform: translateY(30px);
-				}
-				to {
-					opacity: 1;
-					transform: translateY(0);
-				}
-			}
-			.custom-cards .col-xs-12:nth-child(1) .card {
-				animation: fadeInUp 0.6s ease-out 0.1s both;
-			}
-			.custom-cards .col-xs-12:nth-child(2) .card {
-				animation: fadeInUp 0.6s ease-out 0.2s both;
-			}
-			.custom-cards .col-xs-12:nth-child(3) .card {
-				animation: fadeInUp 0.6s ease-out 0.3s both;
-			}
-			.custom-cards .col-xs-12:nth-child(4) .card {
-				animation: fadeInUp 0.6s ease-out 0.4s both;
-			}
-
-			/* ==========================================
-			   RESPONSIVE ADJUSTMENTS
-			   ========================================== */
-			@media screen and (max-width: 768px) {
-				.custom-cards::before,
-				.custom-cards::after {
-					display: none;
-				}
-			}
-		</style>
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
@@ -407,20 +146,7 @@
 												<li class="nav-item d-none d-xl-inline-flex">
                                                     <span class="header-top-email px-0 font-weight-normal d-flex align-items-center"><i class="fas fa-phone text-4"></i> <a class="text-color-default" href="tel:+4987114228020">0871 - 142 280 20</a></span>
 													<span class="header-top-email px-0 font-weight-normal d-flex align-items-center"><i class="far fa-envelope text-4"></i>
-                                                        <script language='JavaScript' type='text/javascript'>
-                                                            var pref = '&#109;a' + 'i&#108;' + '&#116;o';
-                                                            var attribut = 'hr' + 'ef' + '=';
-                                                            var first = '%68%61%6C%6C%6F';
-                                                            var at = '%40';
-                                                            var last = '&#x62;&#x65;&#x73;&#x73;&#x65;&#x72;&#x73;&#x65;&#x68;&#x65;&#x6E;&#x2E;&#x6C;&#x61;';
-                                                            var first2 = '&#x68;&#x61;&#x6C;&#x6C;&#x6F;';
-                                                            var at2 = '&#x40;';
-                                                            var last2 = '&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;';
-
-                                                            document.write( '<a class="text-color-default" ' + attribut + '\'' + pref + ':' + first + at + last + '\'>' );
-                                                            document.write( first2 + at2 + last2 );
-                                                            document.write( '<\/a>' );
-                                                        </script>
+                                                        <a class="text-color-default" href="mailto:hallo@bessersehen.la">hallo@bessersehen.la</a>
                                                         <noscript>
                                                             <span style='display:none; '>are-</span><span style='display:inline; '>&#x68;&#x61;&#x6C;&#x6C;&#x6F;</span><span style='display:none; '>-xya34</span><span style='display:inline; '>[at]</span><span style='display:none; '>ddks-</span><span style='display:inline; '>&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;</span>
                                                         </noscript>
@@ -429,11 +155,6 @@
                                                     <span class="header-top-email px-0 font-weight-normal d-flex align-items-center"><i class="fab fa-facebook-f text-4"></i> <a class="text-color-default" href="https://www.facebook.com/bessersehenlandshut/">Facebook</a></span>
 												</li>
 												<li class="nav-item nav-item-header-top-socials d-flex justify-content-between">
-<!--
-                          <span class="header-top-button-make-as-appoitment d-inline-flex align-items-center justify-content-center h-100 p-0 align-top">
-                            <a href="demo-medical-2-contact-us.html" class="d-flex align-items-center justify-content-center h-100 w-100 btn-primary font-weight-normal text-decoration-none">MAKE AN APPOINTMENT</a>
-													</span>
--->
 												</li>
 											</ul>
 										</nav>
@@ -516,61 +237,6 @@
 			</header>
 
 			<div role="main" class="main">
-<!--
-				<div class="slider-container bg-color-grey rev_slider_wrapper" style="height: 591px;">
-					
-					<div id="revolutionSlider" class="slider rev_slider manual" data-version="5.4.8" style="height: 991px;">
-						<ul>
-                            <li data-transition="fade">
-
-                                <div class="rs-background-video-layer" id="initialVideo"
-                                     data-videomp4=""
-                                     data-videopreload="auto"
-                                     data-volume="100"
-                                     data-forcerewind="on"
-                                     data-nextslideatend="true"
-                                     data-videoloop="none"
-                                     data-autoplay="true">
-                                </div>
-
-								<div class="tp-caption main-label text-color-quaternary slider-text slider-text--title"
-									data-x="['left','left','left','center']"
-									data-y="center"
-									data-start="500"
-									data-hoffset="0"
-									data-voffset="['-250','-256','-140','-70']"
-									data-width="['auto']"
-									data-height="['auto']"
-									data-transform_in="y:[100%];opacity:0;s:500;"
-									data-fontsize="['38','30','30','28']"
-									data-lineheight="['48','40','40','38']"
-									data-textAlign="['left','left','left','center']"
-									style="text-shadow: none; z-index: 5; font-size: 38px; font-weight: 900;">Besser Sehen<br />in Landshut</div>
-
-								<div class="tp-caption main-label text-transform-none shadow-none ws-normal slider-text"
-									data-x="['left','left','left','center']"
-									data-y="center"
-									data-start="1000"
-									data-hoffset="0"
-									data-voffset="['-120','-120','-0','100']"
-									data-width="['400','400','400','400']"
-									data-textAlign="['left','left','left','center']"
-									data-lineheight="['35','33','33','35']"
-									data-height="['auto']"
-									data-transform_in="y:[100%];opacity:0;s:500;"
-									data-fontsize="['24','18','18','24']"
-									style="font-size: 24px; font-weight: 700; color: #777; text-shadow: none;">Wir bieten individuelle Lösungen</br>für besseres Sehen.</br></br>In Landshut.</div>
-
-							</li>
-						</ul>
-					</div>
-					<div class="section-funnel-layer-bottom d-none d-xl-block">
-						<div class="section-funnel-layer bg-light"></div>
-						<div class="section-funnel-layer bg-light"></div>
-					</div>
-					
-				</div>
-			-->
 				<section class="parallax section section-height-3 section-parallax m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="bilder/start-parallax-01.webp">
                     <div class="container">
                         <div class="row align-items-center justify-content-center text-center" style="height: 50vh;">
@@ -699,20 +365,7 @@
                                                 <li><i class="fas fa-phone top-6"></i> <strong>Telefon:</strong> <a href="tel:+4987114228020">0871 &ndash; 142 280 20</a></li>
                                                 <li><i class="fab fa-whatsapp top-6"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/4917632514105" target="_blank" title="WhatsApp">Nachricht schicken</a></li>
                                                 <li><i class="fas fa-envelope top-6"></i> <strong>E-Mail:</strong>
-                                                    <script language='JavaScript' type='text/javascript'>
-                                                        var pref = '&#109;a' + 'i&#108;' + '&#116;o';
-                                                        var attribut = 'hr' + 'ef' + '=';
-                                                        var first = '%68%61%6C%6C%6F';
-                                                        var at = '%40';
-                                                        var last = '&#x62;&#x65;&#x73;&#x73;&#x65;&#x72;&#x73;&#x65;&#x68;&#x65;&#x6E;&#x2E;&#x6C;&#x61;';
-                                                        var first2 = '&#x68;&#x61;&#x6C;&#x6C;&#x6F;';
-                                                        var at2 = '&#x40;';
-                                                        var last2 = '&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;';
-
-                                                        document.write( '<a ' + attribut + '\'' + pref + ':' + first + at + last + '\'>' );
-                                                        document.write( first2 + at2 + last2 );
-                                                        document.write( '<\/a>' );
-                                                    </script>
+                                                    <a href="mailto:hallo@bessersehen.la">hallo@bessersehen.la</a>
                                                     <noscript>
                                                         <span style='display:none; '>are-</span><span style='display:inline; '>&#x68;&#x61;&#x6C;&#x6C;&#x6F;</span><span style='display:none; '>-xya34</span><span style='display:inline; '>[at]</span><span style='display:none; '>ddks-</span><span style='display:inline; '>&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;</span>
                                                     </noscript>
@@ -755,20 +408,7 @@
 								<div class="custom-info-block custom-info-block-email">
 									<span class="text-color-dark font-weight-bolder text-uppercase title-custom-info-block title-custom-info-block-email">E-Mail</span>
 									<span class="font-weight-normal text-color-dark text-custom-info-block p-relative bottom-6 text-custom-info-block-email">
-                                        <script language='JavaScript' type='text/javascript'>
-                                            var pref = '&#109;a' + 'i&#108;' + '&#116;o';
-                                            var attribut = 'hr' + 'ef' + '=';
-                                            var first = '%68%61%6C%6C%6F';
-                                            var at = '%40';
-                                            var last = '&#x62;&#x65;&#x73;&#x73;&#x65;&#x72;&#x73;&#x65;&#x68;&#x65;&#x6E;&#x2E;&#x6C;&#x61;';
-                                            var first2 = '&#x68;&#x61;&#x6C;&#x6C;&#x6F;';
-                                            var at2 = '&#x40;';
-                                            var last2 = '&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;';
-
-                                            document.write( '<a class="text-color-1" ' + attribut + '\'' + pref + ':' + first + at + last + '\'>' );
-                                            document.write( first2 + at2 + last2 );
-                                            document.write( '<\/a>' );
-                                        </script>
+                                        <a class="text-color-1" href="mailto:hallo@bessersehen.la">hallo@bessersehen.la</a>
                                         <noscript>
                                             <span style='display:none; '>are-</span><span style='display:inline; '>&#x68;&#x61;&#x6C;&#x6C;&#x6F;</span><span style='display:none; '>-xya34</span><span style='display:inline; '>[at]</span><span style='display:none; '>ddks-</span><span style='display:inline; '>&#98;&#101;&#115;&#115;&#101;&#114;&#115;&#101;&#104;&#101;&#110;&#46;&#108;&#97;</span>
                                         </noscript>
@@ -839,14 +479,6 @@
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/common/common.min.js"></script>
 		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
-		<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-		<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
-		<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
-		<script src="vendor/isotope/jquery.isotope.min.js"></script>
-		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script src="vendor/vide/jquery.vide.min.js"></script>
-		<script src="vendor/vivus/vivus.min.js"></script>
 
         <script>
             var slides = jQuery('.rev_slider').find('li'),
@@ -869,14 +501,11 @@
 		<script src="js/theme.js"></script>
 
 		<!-- Current Page Vendor and Views -->
-		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
 		<!-- Current Page Vendor and Views -->
 		<script src="js/views/view.contact.js"></script>
 
 		<!-- Demo -->
-		<script src="js/demos/demo-medical-2.js"></script>
 
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
