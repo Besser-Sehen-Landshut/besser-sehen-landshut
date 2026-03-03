@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Analytics** - Umami self-hosted auf Pollux installiert, Reverse Proxy aktiv, Tracking auf allen 10 Seiten eingebunden
 - [x] **Phase 2: Security** - 5 HTTP Security-Headers live via .htaccess, securityheaders.com Grade B+
-- [ ] **Phase 3: Schema** - Alle strukturierten Daten vervollständigen (Optician, WebSite, Service, Person, areaServed)
+- [x] **Phase 3: Schema** - Alle strukturierten Daten vervollständigen (Optician, WebSite, Service, Person, areaServed) (completed 2026-03-03)
 - [ ] **Phase 4: Content** - Alle Leistungsseiten auf 800+ Wörter ausbauen, team.html vertiefen, Meta-Keywords individualisieren
 
 ## Phase Details
@@ -60,10 +60,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Optician-Schema erweitern (openingHoursSpecification, sameAs Maps-CID, areaServed City-Array) + WebSite-Schema hinzufuegen
-- [ ] 03-02-PLAN.md — Service-Schemas auf allen 4 Leistungsseiten: serviceType, image, areaServed City-Array ergaenzen
-- [ ] 03-03-PLAN.md — Person-Schema fuer alle 7 Teammitglieder auf team.html hinzufuegen
-- [ ] 03-04-PLAN.md — Alle 6 geaenderten Dateien committen, deployen und mit Google Rich Results Test validieren
+- [x] 03-01-PLAN.md — Optician-Schema erweitern (openingHoursSpecification, sameAs Maps-CID, areaServed City-Array) + WebSite-Schema hinzufuegen
+- [x] 03-02-PLAN.md — Service-Schemas auf allen 4 Leistungsseiten: serviceType, image, areaServed City-Array ergaenzen
+- [x] 03-03-PLAN.md — Person-Schema fuer alle 7 Teammitglieder auf team.html hinzufuegen
+- [x] 03-04-PLAN.md — Alle 6 geaenderten Dateien committen, deployen und mit Google Rich Results Test validieren
 
 ### Phase 4: Content
 **Goal**: Jede Leistungsseite hat genug Tiefe, um bei lokalen Suchanfragen zu ranken, und Meta-Daten sind seitenindividuell
@@ -86,5 +86,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Analytics | 2/2 | Complete | 2026-03-03 |
 | 2. Security | 1/1 | Complete | 2026-03-03 |
-| 3. Schema | 3/4 | In Progress|  |
+| 3. Schema | 4/4 | Complete   | 2026-03-03 |
 | 4. Content | 0/TBD | Not started | - |

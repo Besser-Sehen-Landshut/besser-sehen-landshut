@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: active
-last_updated: "2026-03-03T08:20:00.000Z"
+last_updated: "2026-03-03T08:25:12Z"
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-03)
 
 **Core value:** Potenzielle Patienten aus Landshut finden bessersehen.la über Google und nehmen Kontakt auf.
-**Current focus:** Phase 3 – SEO Schema
+**Current focus:** Phase 4 – Content
 
 ## Current Position
 
-Phase: 3 of 4 (Schema)
-Plan: 3 of 4 in current phase — COMPLETE
-Status: Phase 3 active — 03-03 complete
-Last activity: 2026-03-03 — 03-03 complete: Person-Schema mit 7 Teammitgliedern auf team.html (E-E-A-T)
+Phase: 3 of 4 (Schema) — COMPLETE
+Plan: 4 of 4 in Phase 3 — COMPLETE
+Status: Phase 3 complete — bereit fuer Phase 4 Content
+Last activity: 2026-03-03 — 03-04 complete: Alle 6 Schema-Dateien deployed, Google Rich Results Test approved (SCHEMA-01 bis SCHEMA-05 erfuellt)
 
-Progress: [█████████████████████░░░] 65% (Phase 1 + Phase 2 + 03-01 + 03-02 + 03-03 complete)
+Progress: [████████████████████████░] 85% (Phase 1 + Phase 2 + Phase 3 complete)
 
 ## Performance Metrics
 
@@ -42,11 +42,11 @@ Progress: [█████████████████████░░
 |-------|-------|-------|----------|
 | 01-analytics | 2/2 | ~75 min | ~38 min |
 | 02-security | 1/1 | ~15 min | ~15 min |
-| 03-schema | 3/4 | ~7 min | ~2 min |
+| 03-schema | 4/4 | ~27 min | ~7 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (15 min), 03-01 (1 min), 03-02 (1 min), 03-03 (5 min)
-- Trend: On track
+- Last 5 plans: 02-01 (15 min), 03-01 (1 min), 03-02 (1 min), 03-03 (5 min), 03-04 (~20 min incl. human verify)
+- Trend: On track — Phase 3 vollstaendig abgeschlossen
 
 *Updated after each plan completion*
 
@@ -76,6 +76,8 @@ Recent decisions affecting current work:
 - [03-03]: Person-Schema JSON-Array mit @context pro Item (keine @graph-Wrapper) — standard-konform
 - [03-03]: worksFor @type Organization (nicht Optician) — allgemeiner fuer Arbeitgeber-Kontext
 - [03-03]: Jennifer Huegel im Schema korrekt benannt trotz fehlerh. alt-Attr "Maria Schueler" im HTML
+- [03-04]: Deploy via GitHub Actions rsync (17s) — kein manueller Upload noetig; alle 12 JSON-LD-Bloecke lokal pre-validiert vor Checkpoint
+- [03-04]: Google Rich Results Test ohne Fehler approved — Phase 3 Schema-Markup vollstaendig (SCHEMA-01 bis SCHEMA-05)
 
 ### Pending Todos
 
@@ -89,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-03T08:20Z
-Stopped at: Completed 03-03-PLAN.md — Person-Schema mit 7 Teammitgliedern auf team.html (E-E-A-T)
-Resume file: None — Phase 3 Plan 04 (WebSite-Schema + areaServed auf index.html) next
+Last session: 2026-03-03T08:25Z
+Stopped at: Completed 03-04-PLAN.md — Alle 6 Schema-Dateien deployed, Google Rich Results Test approved, Phase 3 komplett
+Resume file: None — Phase 4 Content bereit (Leistungsseiten Wortanzahl aufbauen, team.html erweitern)
