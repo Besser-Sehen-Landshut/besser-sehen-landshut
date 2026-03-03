@@ -1,0 +1,28 @@
+# HTTP Security Headers -- bessersehen.la
+# Source: OWASP HTTP Headers Cheat Sheet, Apache 2.4 docs, MDN
+# Verified against site's actual external resources (2026-02-25)
+
+<IfModule mod_headers.c>
+
+    # SEC-01: HSTS -- HTTPS fuer 1 Jahr erzwingen, inkl. Subdomains
+    # analytics.bessersehen.la hat gueltiges SSL-Zertifikat (Phase 1 bestaetigt)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+    # SEC-02: Clickjacking-Schutz -- verhindert Einbettung durch fremde Sites
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # SEC-03: MIME-Type-Sniffing unterbinden
+    Header always set X-Content-Type-Options "nosniff"
+
+    # SEC-04: Referrer-Datenschutz -- Origin bei Cross-Site, volle URL bei Same-Site
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # SEC-05: Content Security Policy
+    # Externe Ressourcen auf dieser Site:
+    #   Google Fonts: fonts.googleapis.com (CSS) + fonts.gstatic.com (Font-Dateien)
+    #   Umami Analytics: analytics.bessersehen.la (Script + XHR-Beacons)
+    #   Google Maps iframe: www.google.com
+    #   Inline-Scripts: document.write() E-Mail-Obfuskierung + jQuery dynamische Styles
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://analytics.bessersehen.la; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.ggpht.com; frame-src https://www.google.com; connect-src 'self' https://analytics.bessersehen.la; object-src 'none'"
+
+</IfModule>
