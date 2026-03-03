@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-03-03T06:59:47.620Z"
+status: active
+last_updated: "2026-03-03T07:35:00.000Z"
 progress:
-  total_phases: 1
+  total_phases: 4
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 3
+  completed_plans: 3
 ---
 
 # Project State
@@ -18,32 +18,33 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-03)
 
 **Core value:** Potenzielle Patienten aus Landshut finden bessersehen.la über Google und nehmen Kontakt auf.
-**Current focus:** Phase 1 – Analytics
+**Current focus:** Phase 2 – Security
 
 ## Current Position
 
 Phase: 2 of 4 (Security)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-03-03 — Phase 1 complete: Umami live at analytics.bessersehen.la, tracking on all 10 pages
+Plan: 1 of 1 in current phase — COMPLETE
+Status: Phase 2 complete
+Last activity: 2026-03-03 — Phase 2 complete: 5 HTTP Security-Headers live auf bessersehen.la, securityheaders.com Grade B+
 
-Progress: [██████████] 25% (Phase 1 complete)
+Progress: [████████████████] 50% (Phase 1 + Phase 2 complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2 (01-01 and 01-02 both complete)
-- Average duration: ~38 min (incl. human checkpoint time in 01-01)
-- Total execution time: ~75 min (01-01: 64 min incl. human; 01-02: ~11 min)
+- Total plans completed: 3 (01-01, 01-02, 02-01)
+- Average duration: ~30 min (incl. human checkpoint time)
+- Total execution time: ~90 min (01-01: 64 min incl. human; 01-02: ~11 min; 02-01: ~15 min exkl. human)
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-analytics | 2/2 | ~75 min | ~38 min |
+| 02-security | 1/1 | ~15 min | ~15 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (64 min incl. human), 01-02 (11 min)
+- Last 5 plans: 01-01 (64 min incl. human), 01-02 (11 min), 02-01 (15 min exkl. human)
 - Trend: On track
 
 *Updated after each plan completion*
@@ -64,6 +65,9 @@ Recent decisions affecting current work:
 - Umami Admin-Passwort geändert (nicht mehr "umami") — neues PW in 01-02-SUMMARY.md
 - Dead GA code war in 2 Stellen pro Datei: im <head>-Kommentar UND im <body>-Template-Block
 - Reverse Proxy für analytics.bessersehen.la via SSH in Apache VHost eingetragen (KeyHelp-UI hat kein Feld dafür)
+- unsafe-inline in CSP behalten: 69+ document.write()-Calls und jQuery inline-Styles — Refactoring in Phase 2 nicht praktikabel
+- HSTS ohne preload deployed: max-age=31536000 + includeSubDomains genuegt fuer Grade B; Preload-List ist irreversibel
+- analytics.bessersehen.la explizit in script-src + connect-src: 'self' deckt Subdomains nicht ab
 
 ### Pending Todos
 
@@ -77,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-03T06:41Z
-Stopped at: Phase 1 complete — 01-01 SUMMARY.md finalized, reverse proxy confirmed live, moving to Phase 2
-Resume file: None — Phase 2 (Security) next: plan .htaccess security headers
+Last session: 2026-03-03T07:35Z
+Stopped at: Completed 02-01-PLAN.md — Security-Headers live auf bessersehen.la, Grade B+, Phase 2 complete
+Resume file: None — Phase 3 (SEO-Schema) next: Optician-Schema auf index.html vervollstaendigen

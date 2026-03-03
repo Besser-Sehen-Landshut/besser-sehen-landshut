@@ -13,11 +13,11 @@
 
 ### Sicherheit
 
-- [ ] **SEC-01**: .htaccess setzt HSTS-Header (Strict-Transport-Security, max-age=31536000)
-- [ ] **SEC-02**: .htaccess setzt X-Frame-Options: SAMEORIGIN
-- [ ] **SEC-03**: .htaccess setzt X-Content-Type-Options: nosniff
-- [ ] **SEC-04**: .htaccess setzt Referrer-Policy: strict-origin-when-cross-origin
-- [ ] **SEC-05**: .htaccess setzt Content-Security-Policy (erlaubt eigene Assets + Google Fonts)
+- [x] **SEC-01**: .htaccess setzt HSTS-Header (Strict-Transport-Security, max-age=31536000) (2026-03-03, commit 76b7392)
+- [x] **SEC-02**: .htaccess setzt X-Frame-Options: SAMEORIGIN (2026-03-03, commit 76b7392)
+- [x] **SEC-03**: .htaccess setzt X-Content-Type-Options: nosniff (2026-03-03, commit 76b7392)
+- [x] **SEC-04**: .htaccess setzt Referrer-Policy: strict-origin-when-cross-origin (2026-03-03, commit 76b7392)
+- [x] **SEC-05**: .htaccess setzt Content-Security-Policy (erlaubt eigene Assets + Google Fonts) (2026-03-03, commit 76b7392)
 
 ### Schema-Markup
 
@@ -68,11 +68,11 @@
 | ANAL-01 | Phase 1 | Complete |
 | ANAL-02 | Phase 1 | Complete (2026-03-03) |
 | ANAL-03 | Phase 1 | Complete (2026-03-03) |
-| SEC-01 | Phase 2 | Pending |
-| SEC-02 | Phase 2 | Pending |
-| SEC-03 | Phase 2 | Pending |
-| SEC-04 | Phase 2 | Pending |
-| SEC-05 | Phase 2 | Pending |
+| SEC-01 | Phase 2 | Complete (2026-03-03) |
+| SEC-02 | Phase 2 | Complete (2026-03-03) |
+| SEC-03 | Phase 2 | Complete (2026-03-03) |
+| SEC-04 | Phase 2 | Complete (2026-03-03) |
+| SEC-05 | Phase 2 | Complete (2026-03-03) |
 | SCHEMA-01 | Phase 3 | Pending |
 | SCHEMA-02 | Phase 3 | Pending |
 | SCHEMA-03 | Phase 3 | Pending |
@@ -93,4 +93,4 @@
 
 ---
 *Requirements defined: 2026-03-03*
-*Last updated: 2026-03-03 nach Roadmap-Erstellung (META-01 → Phase 4)*
+*Last updated: 2026-03-03 nach Phase 2 Abschluss (SEC-01 bis SEC-05 complete)*

@@ -13,7 +13,7 @@ This milestone builds on the SEO foundation (H1-Tags, Canonical, OG-Tags, WebP, 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Analytics** - Umami self-hosted auf Pollux installiert, Reverse Proxy aktiv, Tracking auf allen 10 Seiten eingebunden
-- [ ] **Phase 2: Security** - HTTP Security-Headers via .htaccess auf dem Apache-Server setzen
+- [x] **Phase 2: Security** - 5 HTTP Security-Headers live via .htaccess, securityheaders.com Grade B+
 - [ ] **Phase 3: Schema** - Alle strukturierten Daten vervollständigen (Optician, WebSite, Service, Person, areaServed)
 - [ ] **Phase 4: Content** - Alle Leistungsseiten auf 800+ Wörter ausbauen, team.html vertiefen, Meta-Keywords individualisieren
 
@@ -45,7 +45,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md — .htaccess mit allen 5 Security-Headers erstellen, deployen, securityheaders.com Grade B verifizieren
+- [x] 02-01-PLAN.md — .htaccess mit allen 5 Security-Headers erstellen, deployen, securityheaders.com Grade B+ verifiziert
 
 ### Phase 3: Schema
 **Goal**: Google kann Besser Sehen Landshut als lokales Geschäft vollständig verstehen und im Knowledge Panel darstellen
@@ -79,6 +79,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Analytics | 2/2 | Complete | 2026-03-03 |
-| 2. Security | 0/1 | Not started | - |
+| 2. Security | 1/1 | Complete | 2026-03-03 |
 | 3. Schema | 0/TBD | Not started | - |
 | 4. Content | 0/TBD | Not started | - |
