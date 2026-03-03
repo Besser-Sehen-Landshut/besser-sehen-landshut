@@ -84,7 +84,7 @@
 | CONT-04 | Phase 4 | Pending |
 | CONT-05 | Phase 4 | Pending |
 | CONT-06 | Phase 4 | Pending |
-| META-01 | Phase 5 | Pending |
+| META-01 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 20 total
@@ -93,4 +93,4 @@
 
 ---
 *Requirements defined: 2026-03-03*
-*Last updated: 2026-03-03 nach initialer Definition*
+*Last updated: 2026-03-03 nach Roadmap-Erstellung (META-01 → Phase 4)*
