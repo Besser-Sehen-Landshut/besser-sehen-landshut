@@ -75,7 +75,14 @@ Plans:
   3. team.html enthält Spezialisierungen und Qualifikationen je Person (300+ Wörter gesamt)
   4. Ergolding und Rottenburg a.d.L. sind auf mindestens einer Seite als Einzugsgebiet erwähnt
   5. Jede der 8 Seiten hat ein eigenes, seitenspezifisches `meta name="keywords"`-Tag
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — leistungen-nachtlinsen.html: 800+ Wörter, FAQ-Block (Kosten/Kasse/Sicherheit/Eignung), meta keywords
+- [ ] 04-02-PLAN.md — leistungen-beratung-kurzsichtigkeit.html: 800+ Wörter, Augenlängen-Messung USP-Sektion, meta keywords
+- [ ] 04-03-PLAN.md — leistungen-visuelle-reha.html: 800+ Wörter, Zielgruppen/Hilfsmittel, meta keywords
+- [ ] 04-04-PLAN.md — leistungen-kontaktlinsen.html: 800+ Wörter, Linsentypen/Spezialversorgung, meta keywords
+- [ ] 04-05-PLAN.md — meta keywords auf verbleibenden 4 Seiten (index, leistungen, team, kontakt), deployen, live verifizieren
 
 ## Progress
 
@@ -87,4 +94,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Analytics | 2/2 | Complete | 2026-03-03 |
 | 2. Security | 1/1 | Complete | 2026-03-03 |
 | 3. Schema | 4/4 | Complete   | 2026-03-03 |
-| 4. Content | 0/TBD | Not started | - |
+| 4. Content | 0/5 | Not started | - |
