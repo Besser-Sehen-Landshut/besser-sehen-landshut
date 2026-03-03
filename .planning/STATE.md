@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-03T07:39:59.330Z"
+last_updated: "2026-03-03T08:17:23.739Z"
 progress:
-  total_phases: 2
+  total_phases: 3
   completed_phases: 2
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 7
+  completed_plans: 6
 ---
 
 ---
@@ -31,23 +31,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-03)
 
 **Core value:** Potenzielle Patienten aus Landshut finden bessersehen.la über Google und nehmen Kontakt auf.
-**Current focus:** Phase 2 – Security
+**Current focus:** Phase 3 – Schema
 
 ## Current Position
 
-Phase: 2 of 4 (Security)
-Plan: 1 of 1 in current phase — COMPLETE
-Status: Phase 2 complete
-Last activity: 2026-03-03 — Phase 2 complete: 5 HTTP Security-Headers live auf bessersehen.la, securityheaders.com Grade B+
+Phase: 3 of 4 (Schema)
+Plan: 2 of 4 in current phase — COMPLETE
+Status: Phase 3 active — 03-02 complete
+Last activity: 2026-03-03 — 03-02 complete: Service-Schemas auf 4 Leistungsseiten vervollstaendigt (serviceType, image, areaServed City-Array)
 
-Progress: [████████████████] 50% (Phase 1 + Phase 2 complete)
+Progress: [████████████████████░░░░] 55% (Phase 1 + Phase 2 + 03-01 + 03-02 complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3 (01-01, 01-02, 02-01)
-- Average duration: ~30 min (incl. human checkpoint time)
-- Total execution time: ~90 min (01-01: 64 min incl. human; 01-02: ~11 min; 02-01: ~15 min exkl. human)
+- Total plans completed: 5 (01-01, 01-02, 02-01, 03-01, 03-02)
+- Average duration: ~10 min (schema plans fast, analytics plans had human setup)
+- Total execution time: ~92 min (01-01: 64 min incl. human; 01-02: ~11 min; 02-01: ~15 min; 03-01: ~1 min; 03-02: ~1 min)
 
 **By Phase:**
 
@@ -55,9 +55,10 @@ Progress: [████████████████] 50% (Phase 1 + Phas
 |-------|-------|-------|----------|
 | 01-analytics | 2/2 | ~75 min | ~38 min |
 | 02-security | 1/1 | ~15 min | ~15 min |
+| 03-schema | 2/4 | ~2 min | ~1 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (64 min incl. human), 01-02 (11 min), 02-01 (15 min exkl. human)
+- Last 5 plans: 01-02 (11 min), 02-01 (15 min), 03-01 (1 min), 03-02 (1 min)
 - Trend: On track
 
 *Updated after each plan completion*
@@ -81,6 +82,10 @@ Recent decisions affecting current work:
 - unsafe-inline in CSP behalten: 69+ document.write()-Calls und jQuery inline-Styles — Refactoring in Phase 2 nicht praktikabel
 - HSTS ohne preload deployed: max-age=31536000 + includeSubDomains genuegt fuer Grade B; Preload-List ist irreversibel
 - analytics.bessersehen.la explizit in script-src + connect-src: 'self' deckt Subdomains nicht ab
+- [Phase 03-schema]: openingHoursSpecification als Array (auch bei einem Eintrag) — Schema.org-konform
+- [Phase 03-schema]: closes=16:00 korrigiert (war 18:00 — inhaltlich falsch)
+- [Phase 03-schema]: Kein SearchAction in WebSite-Schema — statische Seite, kein Search-Endpoint
+- [03-02]: Bestehende descriptions beibehalten (praeziser als Plan-Vorschlaege); areaServed City-Array mit Landshut, Ergolding, Rottenburg auf allen 4 Leistungsseiten
 
 ### Pending Todos
 
@@ -94,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-03T07:35Z
-Stopped at: Completed 02-01-PLAN.md — Security-Headers live auf bessersehen.la, Grade B+, Phase 2 complete
-Resume file: None — Phase 3 (SEO-Schema) next: Optician-Schema auf index.html vervollstaendigen
+Last session: 2026-03-03T08:16Z
+Stopped at: Completed 03-02-PLAN.md — Service-Schemas auf 4 Leistungsseiten vervollstaendigt (serviceType, image, areaServed City-Array)
+Resume file: None — Phase 3 continues: 03-03 (Person-Schema team.html) und 03-04 (WebSite-Schema index.html) ausstehend
