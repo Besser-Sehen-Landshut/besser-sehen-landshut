@@ -33,7 +33,7 @@
 - [x] **CONT-02**: leistungen-beratung-kurzsichtigkeit.html hat 800+ Wörter (Myopie-Management, Zielgruppe Kinder/Jugendliche)
 - [x] **CONT-03**: leistungen-visuelle-reha.html hat 800+ Wörter (Hilfsmittel, Beratung, Zielgruppe)
 - [x] **CONT-04**: leistungen-kontaktlinsen.html hat 800+ Wörter (Linsentypen, Anpassung, Vorteile)
-- [ ] **CONT-05**: team.html enthält Spezialisierungen und Qualifikationen je Person (80 → 300+ Wörter)
+- [x] **CONT-05**: team.html enthält Spezialisierungen und Qualifikationen je Person (80 → 300+ Wörter)
 - [x] **CONT-06**: Nachbargemeinden Ergolding und Rottenburg a.d.L. in relevantem Content erwähnt
 
 ### Meta-Daten
@@ -82,7 +82,7 @@
 | CONT-02 | Phase 4 | Complete |
 | CONT-03 | Phase 4 | Complete |
 | CONT-04 | Phase 4 | Complete |
-| CONT-05 | Phase 4 | Pending |
+| CONT-05 | Phase 4 | Complete |
 | CONT-06 | Phase 4 | Complete |
 | META-01 | Phase 4 | Complete |
 
