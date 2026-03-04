@@ -45,7 +45,6 @@
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 		<link rel="stylesheet" href="vendor/animate/animate.min.css">
-		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/theme.css">
@@ -105,8 +104,6 @@
 	}
 	</script>
 		<link rel="stylesheet" href="css/theme-elements.css">
-		<link rel="stylesheet" href="css/theme-blog.css">
-		<link rel="stylesheet" href="css/theme-shop.css">
 
 		<!-- Current Page CSS -->
 
@@ -190,14 +187,14 @@
 															Leistungen
 														</a>
 														<ul class="dropdown-menu">
-															<li>															<li>
+															<li>
 																<a class="dropdown-item font-weight-normal" href="leistungen-kontaktlinsen.html">
 																	Kontaktlinsenversorgung
 																</a>
 															</li>
 															<li>
 																<a class="dropdown-item font-weight-normal" href="leistungen-visuelle-reha.html">
-																	Visuelle Rehabilitation
+																	Rehabilitation bei Sehminderung
 																</a>
 															</li>
 															<li>
@@ -351,7 +348,7 @@
 							<div class="col-sm-12 col-md-6 col-lg-8 mb-4 mb-lg-0">
 								<div class="card border-0 border-radius-0 box-shadow-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
                                     <div class="card-body p-4 z-index-1">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10569.942153432703!2d12.1449762!3d48.5239261!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbec3438eeffd57ca!2sBesser%20Sehen%20Landshut!5e0!3m2!1sde!2sde!4v1583092547844!5m2!1sde!2sde" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10569.942153432703!2d12.1449762!3d48.5239261!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbec3438eeffd57ca!2sBesser%20Sehen%20Landshut!5e0!3m2!1sde!2sde!4v1583092547844!5m2!1sde!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Google Maps - Standort Besser Sehen Landshut"></iframe>
                                     </div>
                                 </div>
 							</div>
@@ -447,7 +444,7 @@
 								<span>Geschlossen</span>
 							</div>
                             <ul class="social-icons">
-								<li class="social-icons-twitter">
+								<li class="social-icons-facebook">
 									<a href="https://www.facebook.com/bessersehenlandshut/" target="_blank" title="Besser Sehen Landshut auf Facebook">
 										<i class="fab fa-facebook text-6 font-weight-semibold text-hover-primary"></i>
 									</a>
@@ -479,37 +476,9 @@
 		<script src="vendor/popper/umd/popper.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/common/common.min.js"></script>
-		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
-
-        <script>
-            var slides = jQuery('.rev_slider').find('li'),
-                totalSlides = slides.length - 1,
-                randomIndex = Math.round(Math.random() * totalSlides);
-            slides.eq(randomIndex).insertBefore(slides.eq(0));
-
-            var videos = [
-				'https://bessersehen.la/videos/video-man01.mp4',
-				'https://bessersehen.la/videos/video-man02.mp4',
-				'https://bessersehen.la/videos/video-woman01.mp4',
-				'https://bessersehen.la/videos/video-woman02.mp4',
-			];
-            var randomVideo = videos[Math.floor(Math.random() * videos.length)];
-            var initialSlide = document.getElementById('initialVideo');
-			if (initialSlide) initialSlide.setAttribute('data-videomp4', randomVideo);
-        </script>
 
 		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
-
-		<!-- Current Page Vendor and Views -->
-
-		<!-- Current Page Vendor and Views -->
-		<script src="js/views/view.contact.js"></script>
-
-		<!-- Demo -->
-
-		<!-- Theme Custom -->
-		<script src="js/custom.js"></script>
 
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
