@@ -259,6 +259,7 @@
 
 								<!-- Zeitstempel für Spam-Schutz -->
 								<input type="hidden" name="form_timestamp" id="form_timestamp" value="">
+								<input type="hidden" name="challenge_token" id="challenge_token" value="">
 
 								<div class="form-row">
 									<div class="form-group col">
@@ -418,13 +419,18 @@
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
 
-		<!-- Anti-Spam Protection (Honeypot + Time Validation) -->
+		<!-- Anti-Spam Protection (Honeypot + Time + Challenge Token) -->
 		<script>
-			// Setze Zeitstempel wenn Seite geladen wird
+			// Setze Zeitstempel und Challenge-Token wenn Seite geladen wird
 			document.addEventListener('DOMContentLoaded', function() {
+				var ts = Date.now();
 				var timestampField = document.getElementById('form_timestamp');
 				if (timestampField) {
-					timestampField.value = Date.now();
+					timestampField.value = ts;
+				}
+				var challengeField = document.getElementById('challenge_token');
+				if (challengeField) {
+					challengeField.value = btoa(ts + ':' + ((ts % 97) * 3));
 				}
 			});
 

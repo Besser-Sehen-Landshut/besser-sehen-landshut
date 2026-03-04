@@ -1,9 +1,9 @@
 <?php
 /*
-Name: 			Contact Form - Honeypot + Time Validation
+Name: 			Contact Form - Multi-Layer Anti-Spam
 Written by: 	Claude Code (Modified from Porto Template)
 Theme Version:	8.0.0
-Anti-Spam:		Honeypot + Time Validation (No Google reCAPTCHA)
+Anti-Spam:		Honeypot + Time Validation + JS Challenge Token + Content Filter
 */
 
 namespace PortoContactForm;
@@ -62,6 +62,136 @@ if (!$spamDetected && !isset($_POST['form_timestamp'])) {
 	$spamReason = 'Missing timestamp';
 }
 
+// 4. Challenge Token Validation (JS-generated)
+if (!$spamDetected) {
+	if (!isset($_POST['challenge_token']) || empty($_POST['challenge_token'])) {
+		$spamDetected = true;
+		$spamReason = 'Missing challenge token';
+		error_log('Spam detected: No challenge token - IP: ' . $_SERVER['REMOTE_ADDR']);
+	} else {
+		$decoded = base64_decode($_POST['challenge_token'], true);
+		if ($decoded === false || strpos($decoded, ':') === false) {
+			$spamDetected = true;
+			$spamReason = 'Invalid challenge token format';
+			error_log('Spam detected: Bad token format - IP: ' . $_SERVER['REMOTE_ADDR']);
+		} else {
+			$parts = explode(':', $decoded, 2);
+			$tokenTs = intval($parts[0]);
+			$tokenResult = intval($parts[1]);
+			$expectedResult = ($tokenTs % 97) * 3;
+
+			if ($tokenResult !== $expectedResult) {
+				$spamDetected = true;
+				$spamReason = 'Challenge token mismatch';
+				error_log('Spam detected: Token mismatch - IP: ' . $_SERVER['REMOTE_ADDR']);
+			}
+			// Timestamp in token must match form_timestamp
+			if (!$spamDetected && isset($_POST['form_timestamp']) && $tokenTs !== intval($_POST['form_timestamp'])) {
+				$spamDetected = true;
+				$spamReason = 'Token timestamp mismatch';
+				error_log('Spam detected: Token/timestamp mismatch - IP: ' . $_SERVER['REMOTE_ADDR']);
+			}
+		}
+	}
+}
+
+// 5. URL Detection in text fields
+if (!$spamDetected) {
+	$textFields = array(
+		isset($_POST['name']) ? $_POST['name'] : '',
+		isset($_POST['betreff']) ? $_POST['betreff'] : '',
+		isset($_POST['message']) ? $_POST['message'] : ''
+	);
+	$urlPattern = '/(https?:\/\/|www\.|:\/\/|\.com\/|\.ru\/|\.cn\/|\.tk\/|\.xyz\/|\.top\/|\.click\/|\.link\/|\[url|<a\s+href)/i';
+	foreach ($textFields as $field) {
+		if (preg_match($urlPattern, $field)) {
+			$spamDetected = true;
+			$spamReason = 'URL in form fields';
+			error_log('Spam detected: URL found - IP: ' . $_SERVER['REMOTE_ADDR']);
+			break;
+		}
+	}
+}
+
+// 6. Spam pattern detection
+if (!$spamDetected) {
+	$allText = (isset($_POST['name']) ? $_POST['name'] : '') . ' '
+		. (isset($_POST['betreff']) ? $_POST['betreff'] : '') . ' '
+		. (isset($_POST['message']) ? $_POST['message'] : '');
+
+	// Non-Latin character sets (Cyrillic, CJK, Arabic)
+	if (preg_match('/[\x{0400}-\x{04FF}\x{4E00}-\x{9FFF}\x{3040}-\x{30FF}\x{0600}-\x{06FF}]/u', $allText)) {
+		$spamDetected = true;
+		$spamReason = 'Non-Latin characters detected';
+		error_log('Spam detected: Non-Latin chars - IP: ' . $_SERVER['REMOTE_ADDR']);
+	}
+
+	// Spam phrases (case-insensitive)
+	if (!$spamDetected) {
+		$spamPhrases = array(
+			'seo', 'marketing', 'casino', 'crypto', 'bitcoin', 'viagra', 'cialis',
+			'cbd', 'loan', 'investment', 'click here', 'buy now', 'free offer',
+			'web design', 'website traffic', 'backlink', 'rank your', 'first page',
+			'google ranking', 'followers', 'instagram', 'tiktok', 'social media',
+			'earn money', 'make money', 'work from home', 'passive income',
+			'diet pill', 'weight loss', 'enlargement', 'pharmacy'
+		);
+		$lowerText = mb_strtolower($allText, 'UTF-8');
+		foreach ($spamPhrases as $phrase) {
+			if (strpos($lowerText, $phrase) !== false) {
+				$spamDetected = true;
+				$spamReason = 'Spam phrase: ' . $phrase;
+				error_log('Spam detected: Phrase "' . $phrase . '" - IP: ' . $_SERVER['REMOTE_ADDR']);
+				break;
+			}
+		}
+	}
+
+	// Excessive caps (>60% uppercase in messages longer than 20 chars)
+	if (!$spamDetected) {
+		$msg = isset($_POST['message']) ? $_POST['message'] : '';
+		if (mb_strlen($msg) > 20) {
+			$upperCount = preg_match_all('/[A-ZÄÖÜ]/u', $msg);
+			$letterCount = preg_match_all('/[a-zA-ZäöüÄÖÜß]/u', $msg);
+			if ($letterCount > 0 && ($upperCount / $letterCount) > 0.6) {
+				$spamDetected = true;
+				$spamReason = 'Excessive caps';
+				error_log('Spam detected: Excessive caps - IP: ' . $_SERVER['REMOTE_ADDR']);
+			}
+		}
+	}
+
+	// Name equals subject (bot pattern)
+	if (!$spamDetected && isset($_POST['name']) && isset($_POST['betreff'])) {
+		if (!empty($_POST['name']) && $_POST['name'] === $_POST['betreff']) {
+			$spamDetected = true;
+			$spamReason = 'Name equals subject';
+			error_log('Spam detected: Name==Subject - IP: ' . $_SERVER['REMOTE_ADDR']);
+		}
+	}
+}
+
+// 7. Disposable email domain check
+if (!$spamDetected && isset($_POST['email'])) {
+	$emailDomain = strtolower(substr(strrchr($_POST['email'], '@'), 1));
+	$disposableDomains = array(
+		'mailinator.com', 'guerrillamail.com', 'tempmail.com', 'yopmail.com',
+		'throwaway.email', 'sharklasers.com', 'guerrillamailblock.com', 'grr.la',
+		'discard.email', 'temp-mail.org', 'fakeinbox.com', 'maildrop.cc',
+		'trashmail.com', 'tempail.com', 'mohmal.com', 'getnada.com',
+		'emailondeck.com', 'mintemail.com', 'trashmail.me', 'harakirimail.com',
+		'mailnesia.com', 'tempr.email', 'dispostable.com', 'mailcatch.com',
+		'10minutemail.com', 'guerrillamail.info', 'guerrillamail.net',
+		'guerrillamail.org', 'guerrillamail.de', 'spam4.me', 'trashmail.net',
+		'wegwerfmail.de', 'wegwerfmail.net', 'byom.de', 'trash-mail.com'
+	);
+	if (in_array($emailDomain, $disposableDomains)) {
+		$spamDetected = true;
+		$spamReason = 'Disposable email: ' . $emailDomain;
+		error_log('Spam detected: Disposable email ' . $emailDomain . ' - IP: ' . $_SERVER['REMOTE_ADDR']);
+	}
+}
+
 // If spam detected, return error
 if ($spamDetected) {
 	$arrResult = array(
@@ -88,7 +218,7 @@ $message = '';
 
 foreach($_POST as $label => $value) {
 	// Skip anti-spam fields
-	if (in_array($label, array('website', 'form_timestamp', 'g-recaptcha-response'))) {
+	if (in_array($label, array('website', 'form_timestamp', 'challenge_token', 'g-recaptcha-response'))) {
 		continue;
 	}
 
