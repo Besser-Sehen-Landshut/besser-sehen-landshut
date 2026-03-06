@@ -45,10 +45,6 @@
 	}
 }
 
-/* Card/picture images – prevent distortion from explicit height attributes */
-picture { display: block; }
-picture img { width: 100%; height: auto; }
-
 /* Cards */
 .custom-cards {
 	position: relative;
