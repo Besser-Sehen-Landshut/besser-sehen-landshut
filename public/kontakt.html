@@ -224,7 +224,7 @@
 
 							<form id="contactForm" class="contact-form-honeypot custom-form-style-1 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="100" action="php/kontakt.php" method="POST">
 								<div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-									<strong>Vielen Dank!</strong> Ihre Nachricht wurde erfolgreich verschickt.
+									<strong>Vielen Dank!</strong> Ihre Nachricht wurde erfolgreich verschickt. Wir melden uns so schnell wie möglich bei Ihnen zurück.
 								</div>
 
 								<div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
@@ -415,6 +415,12 @@
 
 		<!-- Current Page Vendor and Views -->
 		<script src="js/views/view.contact.js"></script>
+		<script>
+			if (new URLSearchParams(window.location.search).get('gesendet') === '1') {
+				document.getElementById('contactSuccess').classList.remove('d-none');
+				history.replaceState(null, '', window.location.pathname);
+			}
+		</script>
 
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>

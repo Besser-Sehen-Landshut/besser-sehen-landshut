@@ -70,32 +70,7 @@ Theme Version:	8.0.0
 
 					if (data.response == 'success') {
 
-						// Uncomment the code below to redirect for a thank you page
-						// self.location = 'thank-you.html';
-
-						$messageSuccess.removeClass('d-none');
-						$messageError.addClass('d-none');
-
-						// Reset Form
-						$form.find('.form-control')
-							.val('')
-							.blur()
-							.parent()
-							.removeClass('has-success')
-							.removeClass('has-danger')
-							.find('label.error')
-							.remove();
-
-						if (($messageSuccess.offset().top - 80) < $(window).scrollTop()) {
-							$('html, body').animate({
-								scrollTop: $messageSuccess.offset().top - 80
-							}, 300);
-						}
-
-						$form.find('.form-control').removeClass('error');
-
-						$submitButton.val( submitButtonText ).attr('disabled', false);
-						
+						window.location.href = window.location.pathname + '?gesendet=1';
 						return;
 
 					} else if (data.response == 'error' && typeof data.errorMessage !== 'undefined') {
