@@ -45,6 +45,9 @@
 	}
 }
 
+/* Card images */
+.card-img-top { height: auto; }
+
 /* Cards */
 .custom-cards {
 	position: relative;
